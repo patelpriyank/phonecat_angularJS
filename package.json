@@ -1,0 +1,36 @@
+{
+  "name": "my_phonecat_angularjs",
+  "version": "1.0.0",
+  "description": "Priyank's first angular project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patelpriyank/phonecat_angularJS.git"
+  },
+  "keywords": [
+    "angularjs"
+  ],
+  "author": "Priyank Patel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patelpriyank/phonecat_angularJS/issues"
+  },
+  "homepage": "https://github.com/patelpriyank/phonecat_angularJS#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-route": "^1.5.8"
+  },
+  "devDependencies": {
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "karma": "^1.3.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-firefox-launcher": "^1.0.0",
+    "karma-jasmine": "^1.0.2",
+    "protractor": "^4.0.11",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
