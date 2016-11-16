@@ -1,7 +1,9 @@
 'use strict';
 
 var angular = require('angular');
-var phonelistCtrl = require('./home/controllers/home.controller.js');
+var phoneList = require("./common/phone-list/phone-list.module");
 
-var phonecatApp = angular.module("phonecatApp", []);
-phonecatApp.controller("PhoneListCtrl", ['$scope', phonelistCtrl]);
+//var phonelistCtrl = require('./home/controllers/home.controller.js');
+
+var phonecatApp = angular.module("phonecatApp", [phoneList.name]);
+//phonecatApp.controller("PhoneListCtrl", ['$scope', phonelistCtrl]);

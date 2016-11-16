@@ -2,12 +2,14 @@
 'use strict';
 
 var angular = require('angular');
-var phonelistCtrl = require('./home/controllers/home.controller.js');
+var phoneList = require("./common/phone-list/phone-list.module");
 
-var phonecatApp = angular.module("phonecatApp", []);
-phonecatApp.controller("PhoneListCtrl", ['$scope', phonelistCtrl]);
+//var phonelistCtrl = require('./home/controllers/home.controller.js');
 
-},{"./home/controllers/home.controller.js":2,"angular":4}],2:[function(require,module,exports){
+var phonecatApp = angular.module("phonecatApp", [phoneList.name]);
+//phonecatApp.controller("PhoneListCtrl", ['$scope', phonelistCtrl]);
+
+},{"./common/phone-list/phone-list.module":3,"angular":5}],2:[function(require,module,exports){
 let phonelistCtrl = function($scope) {
     let _this = this;
 
@@ -24,6 +26,18 @@ phonelistCtrl.prototype.getName = function(){
 
 module.exports = phonelistCtrl;
 },{}],3:[function(require,module,exports){
+var angular = require('angular');
+var phonelistCtrl = require('./phone-list.controller');
+
+var phonelistModule = angular.module("phoneList", []);
+phonelistModule
+.component("phoneList", {
+    templateUrl: "./common/phone-list/phone-list.template.html",
+    controller: phonelistCtrl
+});
+
+module.exports = phonelistModule;
+},{"./phone-list.controller":2,"angular":5}],4:[function(require,module,exports){
 /**
  * @license AngularJS v1.5.8
  * (c) 2010-2016 Google, Inc. http://angularjs.org
@@ -31792,8 +31806,8 @@ $provide.value("$locale", {
 })(window);
 
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 require('./angular');
 module.exports = angular;
 
-},{"./angular":3}]},{},[1]);
+},{"./angular":4}]},{},[1]);
